@@ -1,0 +1,13 @@
+.stars {
+    display: flex;
+    font-size: 30px;
+    margin-top: 5px;
+}
+
+.stars .filled {
+    color: #F56443; /* Estrelas preenchidas */
+}
+
+.stars .empty {
+    color: gray; /* Estrelas vazias */
+}

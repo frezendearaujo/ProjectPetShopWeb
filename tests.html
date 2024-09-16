@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="starsStyle.css">
+    <link rel="stylesheet" href="footer.css">
+
+    <script>
+        window.onload = function () {
+            const carrossel = document.querySelector('.carrossel');
+            const indicators = document.querySelectorAll('.indicator');
+            let currentSlide = 0;
+            let slideTimer;
+
+            function updateIndicators() {
+                indicators.forEach((indicator, index) => {
+                    if (index === currentSlide) {
+                        indicator.classList.add('active');
+                    } else {
+                        indicator.classList.remove('active');
+                    }
+                });
+            }
+
+            function startAutoScroll() {
+                slideTimer = setInterval(() => {
+                    currentSlide = (currentSlide + 1) % carrossel.children.length; // Garante que vai voltar ao início
+
+                    // Se estiver na última imagem, volta para a primeira
+                    if (currentSlide === 0) {
+                        carrossel.scrollTo({
+                            left: 0,
+                            behavior: 'smooth'
+                        });
+                    } else {
+                        carrossel.scrollBy({
+                            left: carrossel.clientWidth,  // Rola horizontalmente o valor da largura do carrossel
+                            behavior: 'smooth'            // Animação suave
+                        });
+                    }
+
+                    updateIndicators();  // Atualiza os indicadores
+                }, 3000); // Tempo em milissegundos (3 segundos entre as transições)
+            }
+
+            startAutoScroll();
+        };
+
+
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+    <header>
+        <!-- Contêiner da barra de navegação -->
+        <div class="navContainer">
+            <!-- Título na esquerda -->
+            <div class="navTitle">
+                LifePet <img src="logo.png" alt="">
+            </div>
+
+            <!-- Navegação à direita -->
+            <div class="customNav">
+                <ul>
+                    <li><a href="tests.html">Produtos</a></li>
+                    <li><a href="agendamento.html">Agendamentos</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Linha decorativa abaixo da navegação -->
+        <div class="customLine"></div>
+    </header>
+    <!-- Carrossel de imagens -->
+    
+    <div class="carrossel">
+        <img src="banho.jpg" alt="">
+        <img src="tosa.jpg" alt="">
+        <img src="comida.png" alt="">
+    </div>
+
+    <div class="progress-indicators">
+        <span class="indicator active"></span>
+        <span class="indicator"></span>
+        <span class="indicator"></span>
+    </div>
+
+    <div class="customLine2">
+
+    </div>
+    <div class="productsWrapper">
+        <div class="productContainer">
+
+            <img src="comida.png" alt="">
+            <div class="productTitle">
+                Comida
+            </div>
+
+            <div class="customLine"></div>
+
+            <div class="stars">
+                <span class="filled">★</span>
+                <span class="filled">★</span>
+                <span class="filled">★</span>
+                <span class="filled">★</span>
+                <span class="empty">★</span>
+            </div>
+
+            <div class="productPrice">
+                R$18,99
+            </div>
+        </div>
+        <div class="productContainer">
+
+            <img src="comida.png" alt="">
+            <div class="productTitle">
+                Comida
+            </div>
+
+            <div class="customLine"></div>
+
+            <div class="stars">
+                <span class="filled">★</span>
+                <span class="filled">★</span>
+                <span class="filled">★</span>
+                <span class="filled">★</span>
+                <span class="empty">★</span>
+            </div>
+
+            <div class="productPrice">
+                R$18,99
+            </div>
+        </div>
+
+        <div class="productContainer">
+
+            <img src="comida.png" alt="">
+            <div class="productTitle">
+                Comida
+            </div>
+
+            <div class="customLine"></div>
+
+            <div class="stars">
+                <span class="filled">★</span>
+                <span class="filled">★</span>
+                <span class="filled">★</span>
+                <span class="filled">★</span>
+                <span class="empty">★</span>
+            </div>
+
+            <div class="productPrice">
+                R$18,99
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Meu Website. Todos os direitos reservados.</p>
+        
+        <!-- Links do footer -->
+        <p>
+            <a href="tests.html">Produtos</a> |
+            <a href="agendamento.html">Agendamentos</a> |
+            <a href="cadastro.html">Cadastro</a>
+        </p>
+
+        
+        
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+</head>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="starsStyle.css">
+<link rel="stylesheet" href="cadastroStyle.css">
+<link rel="stylesheet" href="agendamentoStyle.css">
+<link rel="stylesheet" href="footer.css">
+
+<body>
+    <header>
+        <!-- Contêiner da barra de navegação -->
+        <div class="navContainer">
+            <!-- Título na esquerda -->
+            <div class="navTitle">
+                LifePet <img src="logo.png" alt="">
+            </div>
+
+            <!-- Navegação à direita -->
+            <div class="customNav">
+                <ul>
+                    <li><a href="tests.html">Produtos</a></li>
+                    <li><a href="agendamento.html">Agendamentos</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Linha decorativa abaixo da navegação -->
+        <div class="customLine"></div>
+    </header>
+
+    <div class="radioGroupAgendamento">
+        <p>Qual o tipo de serviço que você quer agendar?</p>
+        <label>
+            <input type="radio", name="nameServiço">
+            Banho
+        </label>
+        <label>
+            <input type="radio", name="nameServiço">
+            Tosa
+        </label>
+    </div>
+
+    <div class="dataHoraContainer">
+        <label for="datetime">Escolha uma data e hora:</label>
+        <input type="datetime-local" id="datetime">
+    </div>
+    
+    <div class="authEmailSending">
+        <p>Quer serviço de tele-busca? </p>
+        <input type="checkbox">
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Meu Website. Todos os direitos reservados.</p>
+        
+        <!-- Links do footer -->
+        <p>
+            <a href="tests.html">Produtos</a> |
+            <a href="agendamento.html">Agendamentos</a> |
+            <a href="cadastro.html">Cadastro</a>
+        </p>
+
+        
+        
+    </footer>
+    
+</body>
+</html>
